@@ -14,9 +14,20 @@ var isOwnResponse = function(comment) {
 }
 
 var haveResponded = function(comment) {
-    var haveResponded = false;
 
-    return haveResponded;
+    if(comment.responses.length === 0) {
+        return false;
+    }
+
+    var hasCommentBeenRespondedTo = false;
+
+    comment.responses.forEach( (response) => {
+        if(isOwnResponse(response)) {
+            hasCommentBeenRespondedTo = true;
+        }
+    });
+
+    return hasCommentBeenRespondedTo;
 }
 
 var unmarshalComment = function(commentFromApi) {
@@ -74,6 +85,20 @@ var generateCommentTree = function(username, permalink, depth) {
         });
 }
 
+var retrieveCommentsBotHasNotRespondedTo = function(username, permalink) {
+    return generateCommentTree(username, permalink)
+    .then( (comments) => {
+        var unrespondedComments = [];
+        comments.forEach( (comment) => {
+            if(! haveResponded(comment)) {
+                unrespondedComments.push(comment);
+            }
+        });
+        return Promise.resolve(unrespondedComments);
+    });
+}
+
 module.exports = {
-    generateCommentTree: generateCommentTree
+    generateCommentTree: generateCommentTree,
+    retrieveNewComments: retrieveCommentsBotHasNotRespondedTo
 }

@@ -3,8 +3,8 @@ const S = require('string');
 const steem = require('steem');
 
 // Private
-function getPermalink(title) {
-    return steem.formatter.commentPermlink() + S(title).dasherize();
+function getPermalink(username, permalink) {
+    return steem.formatter.commentPermlink(username, permalink);
 }
 
 function getMetaData() {
