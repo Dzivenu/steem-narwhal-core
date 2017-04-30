@@ -1,3 +1,3 @@
 module.exports = Object.freeze({
-    SELF_USERNAME : ''
+    SELF_USERNAME : 'lantto'
 });
