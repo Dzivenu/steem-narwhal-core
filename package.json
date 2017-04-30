@@ -1,0 +1,17 @@
+{
+  "name": "steem-narwhal-core",
+  "version": "0.0.0",
+  "description": "The core functionality of the Narwhal Steemit bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "steemit",
+    "steem"
+  ],
+  "author": "dev@conteenuity.com",
+  "license": "MIT"
+}
