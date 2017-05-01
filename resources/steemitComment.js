@@ -21,6 +21,7 @@ function SteemitComment(commentAuthor, commentBody, commentPermalink, commentTit
     this.permalink = commentPermalink;
     this.created = commentPosted;
     this.metaData = commentMetaData;
+    this.isGuess = false;
     this.responses = [];
 }
 

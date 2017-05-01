@@ -5,7 +5,7 @@ chai.should();
 
 const assert = require('chai').assert;
 
-const response = require("../../response/comment.js");
+const respond = require("../../respond/comment.js");
 const listen = require("../../listen/comments.js");
 const SteemitComment = require('../../resources/steemitComment.js');
 
@@ -37,7 +37,7 @@ describe('Input argument validation tests', () => {
                     'Hi',
                     'Glad to hear it ^_^'
                 );
-                return Promise.resolve(response.postComment(commentToPost));
+                return Promise.resolve(respond.postComment(commentToPost));
             })
             .should.be.fulfilled;
         }

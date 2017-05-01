@@ -4,12 +4,16 @@ const steemitComment = require('../resources/steemitComment.js');
 
 const commiserations = [
     "That's not the correct answer. Thanks for playing - better luck next time!",
-    "Oh no, the ground there wasn't sturdy and collapsed into a big Sinkhole 🕳️☠️",
+    "Oh no, the ground there wasn't sturdy and collapsed into a big Sinkhole 🕳️☠️. Better luck next time!",
     "Bad luck - whilst digging you hit rock and your Pickaxe broke ⛏🙁️"
 ];
 
 const congratulations = [
     "That's correct; you found some treasure 💎. Well done!"
+];
+
+const admonishment = [
+    "I'm afraid that you can only enter once per "
 ];
 
 
