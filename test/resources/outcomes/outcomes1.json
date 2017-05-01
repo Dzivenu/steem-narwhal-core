@@ -1,0 +1,15 @@
+[
+  {
+    "x": "A",
+    "y": "1",
+    "isPositive": true,
+    "message": "You won 1 Steem"
+  },
+
+  {
+    "x": "B",
+    "y": "2",
+    "isPositive": false,
+    "message": "You disturbed a bees nest 🐝🐝🐝 and had to flee."
+  }
+]
