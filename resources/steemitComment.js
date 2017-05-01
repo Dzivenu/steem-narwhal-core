@@ -8,7 +8,8 @@ function getPermalink(username, permalink) {
 }
 
 function getMetaData() {
-    return JSON.stringify({app: '${pkg.name}/${pkg.version}'});
+    var details = pkg.name + ':' + pkg.version;
+    return JSON.stringify({app: details});
 }
 
 // Public
@@ -25,6 +26,30 @@ function SteemitComment(commentAuthor, commentBody, commentPermalink, commentTit
 
 SteemitComment.prototype.addChildResponse = function(comment) {
     this.responses.push(comment);
+}
+
+// Static function
+SteemitComment.unmarshalComment = function(commentFromApi) {
+    return new SteemitComment(
+        commentFromApi.author,
+        commentFromApi.body,
+        commentFromApi.permlink,
+        commentFromApi.title,
+        commentFromApi.created
+    );
+}
+
+// Static function
+SteemitComment.createComment = function(parentComment, author, title, body) {
+    return new SteemitComment(
+        author,
+        body,
+        getPermalink(parentComment.author, parentComment.permalink),
+        title,
+        null,
+        parentComment,
+        getMetaData()
+    );
 }
 
 module.exports = SteemitComment;

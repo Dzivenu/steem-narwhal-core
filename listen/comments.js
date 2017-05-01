@@ -30,16 +30,6 @@ var haveResponded = function(comment) {
     return hasCommentBeenRespondedTo;
 }
 
-var unmarshalComment = function(commentFromApi) {
-    return new SteemitComment(
-        commentFromApi.author,
-        commentFromApi.body,
-        commentFromApi.permlink,
-        commentFromApi.title,
-        commentFromApi.created
-    );
-}
-
 /**
  * Recursive function to walk the tree of comments for a post.
  * The steemd API function getContentRepliesAsync only returns a shallow list of comments and we want to retrieve the
@@ -52,7 +42,7 @@ var walkCommentTree = function(username, permalink, maxDepth, parentComment) {
         var promises = [];
 
         comments.forEach( (comment) => {
-            var currentComment = unmarshalComment(comment);
+            var currentComment = SteemitComment.unmarshalComment(comment);
             parentComment.addChildResponse(currentComment);
             if(comment.depth !== maxDepth || comment.children !== 0) {
                 var tmpPromise = walkCommentTree(comment.author, comment.permlink, maxDepth, currentComment);
