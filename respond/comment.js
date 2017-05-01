@@ -13,7 +13,7 @@ const congratulations = [
 ];
 
 const admonishment = [
-    "I'm afraid that you can only enter once per "
+    "I'm afraid that you can only enter once per post"
 ];
 
 

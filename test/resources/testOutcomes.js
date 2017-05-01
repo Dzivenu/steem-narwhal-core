@@ -1,6 +1,6 @@
-var Outcomes = require('../../resources/outcomes.js');
-var Promise = require('bluebird');
-var fs = Promise.promisifyAll(require("fs"));
+const Outcomes = require('../../resources/outcomes.js');
+const Promise = require('bluebird');
+const fs = Promise.promisifyAll(require("fs"));
 
 const assert = require('chai').assert;
 
