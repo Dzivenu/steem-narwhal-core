@@ -1,0 +1,5 @@
+{
+  "config_location" : "./test/resources/config/",
+  "outcomes_location" : "./test/resources/outcomes/",
+  "storage_location" : "./test/resources/storage/"
+}

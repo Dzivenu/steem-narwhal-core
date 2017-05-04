@@ -8,18 +8,18 @@ const assert = require('chai').assert;
 chai.use(chaiAsPromised);
 chai.should();
 
-var INVALID_PATH_ERROR_REGEX = /A document/;
-var NON_BUFFER_ERROR_REGEX = /A buffer/;
-var DOES_NOT_EXIST_ERROR_REGEX = /does not exist/;
+const INVALID_PATH_ERROR_REGEX = /A document/;
+const NON_BUFFER_ERROR_REGEX = /A buffer/;
+const DOES_NOT_EXIST_ERROR_REGEX = /does not exist/;
 
-var DIRECTORY_THAT_DOES_NOT_EXIST = './foo/bar';
-var FILE_PATH_THAT_DOES_NOT_EXIST = './foo/bar/doesNotExist.txt';
+const DIRECTORY_THAT_DOES_NOT_EXIST = './foo/bar';
+const FILE_PATH_THAT_DOES_NOT_EXIST = './foo/bar/doesNotExist.txt';
 
-var DIRECTORY_THAT_DOES_EXIST = './test/resources/storage/';
-var FILE_PATH_THAT_DOES_EXIST = './test/resources/storage/test_plaintext_1.txt';
-var TEXT_FILE_PATH_THAT_DOES_EXIST = './test/resources/storage/test_plaintext_1.txt';
-var JSON_FILE_PATH_THAT_DOES_EXIST = './test/resources/config/test_metadata_1.json';
-var TEST_TEXT = 'The quick brown fox jumps over the lazy dog';
+const DIRECTORY_THAT_DOES_EXIST = './test/resources/storage/';
+const FILE_PATH_THAT_DOES_EXIST = './test/resources/storage/test_plaintext_1.txt';
+const TEXT_FILE_PATH_THAT_DOES_EXIST = './test/resources/storage/test_plaintext_1.txt';
+const JSON_FILE_PATH_THAT_DOES_EXIST = './test/resources/config/test_metadata_1.json';
+const TEST_TEXT = 'The quick brown fox jumps over the lazy dog';
 
 describe('Input argument validation tests', () => {
 
