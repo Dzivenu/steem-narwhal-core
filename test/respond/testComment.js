@@ -5,8 +5,8 @@ chai.should();
 
 const assert = require('chai').assert;
 
-const respond = require("../../respond/comment.js");
-const listen = require("../../listen/comments.js");
+const respond = require("../../produce/comment.js");
+const listen = require("../../consume/comments.js");
 const SteemitComment = require('../../resources/steemitComment.js');
 
 const testUser = "guest123";

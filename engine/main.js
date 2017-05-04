@@ -1,5 +1,5 @@
-const listen = require('../listen/comments.js');
-const respond = require('../respond/comment.js');
+const listen = require('../consume/comments.js');
+const respond = require('../produce/comment.js');
 const Outcomes = require('../resources/outcomes.js');
 const PoisonPill = require('../resources/outcomes.js');
 const checkResponses = require('./checkResponses.js');
