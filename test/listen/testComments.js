@@ -16,7 +16,7 @@ const testBotPostWithCommentsOn1 = "daft-punk-random-access-memories";
 const testBotPostWithCommentsOn2 = "sd561gs65dg1";
 const testBotPostWithCommentsOn3 = "test-notifications"
 
-const comments = require("../../consume/comments.js");
+const comments = require("../../produce/comments.js");
 
 describe('Input argument validation tests', () => {
     it('should not be possible to call the generateCommentTree function with no parameters', () => {
